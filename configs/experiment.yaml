@@ -1,0 +1,109 @@
+# ==============================================================================
+# Credit Risk XAI Benchmark: Central Experiment Configuration
+# Project: Trade-Offs Between Real-Time Inference Latency and Explanation Faithfulness
+# ==============================================================================
+
+project:
+  name: "credit-xai-benchmark"
+  seed: 42
+  device: "cpu"  # Fair, reproducible single-threaded/multi-threaded CPU baseline for inference microservices
+
+data:
+  dataset_name: "give_me_some_credit"
+  target_column: "SeriousDlqin2yrs"
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  raw_filename: "give_me_some_credit.csv"
+  processed_train_filename: "train.parquet"
+  processed_val_filename: "val.parquet"
+  processed_test_filename: "test.parquet"
+  train_split: 0.70
+  val_split: 0.15
+  test_split: 0.15
+  stratify: true
+  subsample_size: 50000  # High statistical power, balanced for feasibility
+  outlier_handling:
+    clip_revolving_utilization: 13.0
+    clip_debt_ratio: 3000.0
+    max_age: 100
+    min_age: 18
+
+models:
+  xgboost:
+    n_estimators: 200
+    max_depth: 5
+    learning_rate: 0.05
+    subsample: 0.8
+    colsample_bytree: 0.8
+    scale_pos_weight: 1.0
+    random_state: 42
+    early_stopping_rounds: 15
+  lightgbm:
+    n_estimators: 200
+    max_depth: 5
+    num_leaves: 31
+    learning_rate: 0.05
+    subsample: 0.8
+    colsample_bytree: 0.8
+    random_state: 42
+    verbosity: -1
+  mlp:
+    hidden_dims: [64, 32]
+    activation: "relu"
+    dropout: 0.2
+    learning_rate: 0.001
+    weight_decay: 0.0001
+    batch_size: 128
+    epochs: 30
+    early_stopping_patience: 5
+    random_state: 42
+  logistic_regression:
+    C: 1.0
+    max_iter: 1000
+    random_state: 42
+
+explainers:
+  background_size: 100  # Standard reference distribution size for KernelSHAP & LIME
+  treeshap:
+    feature_perturbation: "interventional"
+    model_output: "raw"
+  kernelshap:
+    nsamples_list: [50, 100, 200]
+    default_nsamples: 100
+  fastshap:
+    hidden_dims: [128, 128]
+    learning_rate: 0.001
+    batch_size: 64
+    epochs: 25
+    paired_sampling: true
+  lime:
+    num_samples_list: [100, 200, 500]
+    default_num_samples: 200
+    discretize_continuous: false
+    kernel_width: null
+
+benchmarking:
+  warmup_runs: 25
+  timed_samples: 1000  # Statistical significance for p50, p95, p99 latency measurement
+  batch_sizes: [1, 8, 32]
+  strict_sla_ms: 50.0   # Operational service-level target (strict)
+  broad_sla_ms: 100.0   # Operational service-level target (broad)
+
+faithfulness:
+  top_k_values: [1, 3, 5]
+  perturbation_steps: 10
+  baseline_strategy: "mean"  # Replacing removed features with mean or median background value
+  evaluate_deletion_auc: true
+
+robustness:
+  stochastic_seeds: [42, 123, 456, 789, 1011]
+  input_perturbation_epsilons: [0.01, 0.05, 0.10]
+  background_sample_sizes: [25, 50, 100, 200]
+
+paths:
+  results_raw: "results/raw"
+  results_tables: "results/tables"
+  results_figures: "results/figures"
+  results_summaries: "results/summaries"
+  paper_tables: "paper/tables"
+  paper_figures: "paper/figures"

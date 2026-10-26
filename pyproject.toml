@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "credit-xai-benchmark"
+version = "0.1.0"
+description = "A reproducible empirical benchmark evaluating the trade-offs between real-time inference latency and explanation faithfulness in credit risk scoring."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "Anar Gadirli", email = "anargadirli55@gmail.com" }
+]
+license = { text = "MIT" }
+dependencies = [
+    "numpy>=1.26.0",
+    "pandas>=2.2.0",
+    "scipy>=1.12.0",
+    "scikit-learn>=1.4.0",
+    "xgboost>=2.0.0",
+    "lightgbm>=4.3.0",
+    "shap>=0.45.0",
+    "lime>=0.2.0",
+    "torch>=2.2.0",
+    "matplotlib>=3.8.0",
+    "seaborn>=0.13.0",
+    "pyyaml>=6.0.1",
+    "pytest>=8.0.0",
+    "tabulate>=0.9.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.1.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]

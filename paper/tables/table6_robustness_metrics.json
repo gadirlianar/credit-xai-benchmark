@@ -1,0 +1,146 @@
+[
+  {
+    "explainer_name": "TreeSHAP",
+    "model_name": "XGBoost",
+    "metric_type": "Stochastic Seed Stability",
+    "top3_jaccard_similarity": 1.0,
+    "spearman_rank_stability": 1.0,
+    "cosine_similarity": 1.0,
+    "lipschitz_sensitivity": null
+  },
+  {
+    "explainer_name": "TreeSHAP",
+    "model_name": "LightGBM",
+    "metric_type": "Stochastic Seed Stability",
+    "top3_jaccard_similarity": 1.0,
+    "spearman_rank_stability": 1.0,
+    "cosine_similarity": 1.0,
+    "lipschitz_sensitivity": null
+  },
+  {
+    "explainer_name": "FastSHAP",
+    "model_name": "XGBoost",
+    "metric_type": "Stochastic Seed Stability",
+    "top3_jaccard_similarity": 1.0,
+    "spearman_rank_stability": 1.0,
+    "cosine_similarity": 1.0,
+    "lipschitz_sensitivity": null
+  },
+  {
+    "explainer_name": "FastSHAP",
+    "model_name": "LightGBM",
+    "metric_type": "Stochastic Seed Stability",
+    "top3_jaccard_similarity": 1.0,
+    "spearman_rank_stability": 1.0,
+    "cosine_similarity": 1.0,
+    "lipschitz_sensitivity": null
+  },
+  {
+    "explainer_name": "FastSHAP",
+    "model_name": "MLP",
+    "metric_type": "Stochastic Seed Stability",
+    "top3_jaccard_similarity": 1.0,
+    "spearman_rank_stability": 1.0,
+    "cosine_similarity": 1.0,
+    "lipschitz_sensitivity": null
+  },
+  {
+    "explainer_name": "LIME",
+    "model_name": "LightGBM",
+    "metric_type": "Stochastic Seed Stability",
+    "top3_jaccard_similarity": 0.714,
+    "spearman_rank_stability": 0.8576,
+    "cosine_similarity": 0.9022,
+    "lipschitz_sensitivity": null
+  },
+  {
+    "explainer_name": "TreeSHAP",
+    "model_name": "XGBoost",
+    "metric_type": "Input Perturbation (eps=0.05)",
+    "top3_jaccard_similarity": 0.8,
+    "spearman_rank_stability": null,
+    "cosine_similarity": null,
+    "lipschitz_sensitivity": 0.1156
+  },
+  {
+    "explainer_name": "FastSHAP",
+    "model_name": "XGBoost",
+    "metric_type": "Input Perturbation (eps=0.05)",
+    "top3_jaccard_similarity": 0.808,
+    "spearman_rank_stability": null,
+    "cosine_similarity": null,
+    "lipschitz_sensitivity": 0.0997
+  },
+  {
+    "explainer_name": "KernelSHAP",
+    "model_name": "XGBoost",
+    "metric_type": "Input Perturbation (eps=0.05)",
+    "top3_jaccard_similarity": 0.74,
+    "spearman_rank_stability": null,
+    "cosine_similarity": null,
+    "lipschitz_sensitivity": 0.1746
+  },
+  {
+    "explainer_name": "LIME",
+    "model_name": "XGBoost",
+    "metric_type": "Input Perturbation (eps=0.05)",
+    "top3_jaccard_similarity": 0.78,
+    "spearman_rank_stability": null,
+    "cosine_similarity": null,
+    "lipschitz_sensitivity": 0.1589
+  },
+  {
+    "explainer_name": "TreeSHAP",
+    "model_name": "LightGBM",
+    "metric_type": "Input Perturbation (eps=0.05)",
+    "top3_jaccard_similarity": 0.8,
+    "spearman_rank_stability": null,
+    "cosine_similarity": null,
+    "lipschitz_sensitivity": 0.4108
+  },
+  {
+    "explainer_name": "FastSHAP",
+    "model_name": "LightGBM",
+    "metric_type": "Input Perturbation (eps=0.05)",
+    "top3_jaccard_similarity": 0.8,
+    "spearman_rank_stability": null,
+    "cosine_similarity": null,
+    "lipschitz_sensitivity": 0.0784
+  },
+  {
+    "explainer_name": "KernelSHAP",
+    "model_name": "LightGBM",
+    "metric_type": "Input Perturbation (eps=0.05)",
+    "top3_jaccard_similarity": 0.668,
+    "spearman_rank_stability": null,
+    "cosine_similarity": null,
+    "lipschitz_sensitivity": 0.294
+  },
+  {
+    "explainer_name": "LIME",
+    "model_name": "LightGBM",
+    "metric_type": "Input Perturbation (eps=0.05)",
+    "top3_jaccard_similarity": 0.54,
+    "spearman_rank_stability": null,
+    "cosine_similarity": null,
+    "lipschitz_sensitivity": 0.1687
+  },
+  {
+    "explainer_name": "FastSHAP",
+    "model_name": "MLP",
+    "metric_type": "Input Perturbation (eps=0.05)",
+    "top3_jaccard_similarity": 0.8,
+    "spearman_rank_stability": null,
+    "cosine_similarity": null,
+    "lipschitz_sensitivity": 0.0958
+  },
+  {
+    "explainer_name": "FastSHAP (Retrained 5 Seeds)",
+    "model_name": "XGBoost",
+    "metric_type": "Retraining Seed Stability",
+    "top3_jaccard_similarity": 0.6873,
+    "spearman_rank_stability": 0.8217,
+    "cosine_similarity": 0.985,
+    "lipschitz_sensitivity": null
+  }
+]

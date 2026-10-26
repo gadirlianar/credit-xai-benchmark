@@ -1,0 +1,57 @@
+{
+  "SeriousDlqin2yrs": {
+    "type": "binary",
+    "description": "Person experienced 90 days past due delinquency or worse in past 2 years (Target variable)",
+    "domain": "{0, 1}"
+  },
+  "RevolvingUtilizationOfUnsecuredLines": {
+    "type": "continuous",
+    "description": "Total balance on credit cards and personal lines of credit divided by sum of credit limits",
+    "domain": "Ratio >= 0"
+  },
+  "age": {
+    "type": "integer",
+    "description": "Age of borrower in years",
+    "domain": "[18, 100]"
+  },
+  "NumberOfTime30-59DaysPastDueNotWorse": {
+    "type": "integer",
+    "description": "Number of times borrower has been 30-59 days past due but no worse in the last 2 years",
+    "domain": "Count >= 0"
+  },
+  "DebtRatio": {
+    "type": "continuous",
+    "description": "Monthly debt payments, alimony, living costs divided by monthly gross income",
+    "domain": "Ratio >= 0"
+  },
+  "MonthlyIncome": {
+    "type": "continuous",
+    "description": "Monthly gross income in USD",
+    "domain": "USD >= 0"
+  },
+  "NumberOfOpenCreditLinesAndLoans": {
+    "type": "integer",
+    "description": "Number of open loans (installment and credit cards)",
+    "domain": "Count >= 0"
+  },
+  "NumberOfTimes90DaysLate": {
+    "type": "integer",
+    "description": "Number of times borrower has been 90 or more days past due",
+    "domain": "Count >= 0"
+  },
+  "NumberRealEstateLoansOrLines": {
+    "type": "integer",
+    "description": "Number of mortgage and real estate loans including home equity lines of credit",
+    "domain": "Count >= 0"
+  },
+  "NumberOfTime60-89DaysPastDueNotWorse": {
+    "type": "integer",
+    "description": "Number of times borrower has been 60-89 days past due but no worse in the last 2 years",
+    "domain": "Count >= 0"
+  },
+  "NumberOfDependents": {
+    "type": "integer",
+    "description": "Number of dependents in family excluding borrower",
+    "domain": "Count >= 0"
+  }
+}

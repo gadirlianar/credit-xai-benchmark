@@ -1,0 +1,28 @@
+{
+  "os_name": "Darwin",
+  "os_release": "27.0.0",
+  "os_version": "Darwin Kernel Version 27.0.0: Tue Aug 11 21:02:59 PDT 2026; root:xnu-13432.1.9~1/RELEASE_ARM64_T8142",
+  "machine": "arm64",
+  "processor": "arm",
+  "python_version": "3.12.15 (main, Oct 21 2026, 17:38:27) [Clang 23.1.3 ]",
+  "python_executable": "/Users/anargadirli/Desktop/untitled folder 2/.venv/bin/python",
+  "cpu_count_logical": 10,
+  "cpu_count_physical": 10,
+  "total_ram_gb": 16.0,
+  "available_ram_gb": 4.65,
+  "libraries": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scipy": "1.18.1",
+    "sklearn": "1.9.1",
+    "xgboost": "3.4.1",
+    "lightgbm": "4.7.0",
+    "shap": "0.54.1",
+    "lime": "unknown",
+    "torch": "2.14.1",
+    "matplotlib": "3.11.2",
+    "seaborn": "0.13.2",
+    "pyyaml": "not_installed",
+    "pytest": "9.1.1"
+  }
+}

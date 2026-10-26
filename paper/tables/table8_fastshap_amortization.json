@@ -1,0 +1,32 @@
+{
+  "xgb": {
+    "model": "XGBoost",
+    "fastshap_training_seconds": 7.354,
+    "fastshap_latency_ms": 0.027,
+    "vs_treeshap": {
+      "name": "TreeSHAP",
+      "latency_ms": 1.495,
+      "break_even_queries": 5010
+    },
+    "vs_kernelshap": {
+      "name": "KernelSHAP",
+      "latency_ms": 8.1,
+      "break_even_queries": 911
+    }
+  },
+  "mlp": {
+    "model": "MLP",
+    "fastshap_training_seconds": 3.475,
+    "fastshap_latency_ms": 0.027,
+    "vs_kernelshap": {
+      "name": "KernelSHAP",
+      "latency_ms": 1.55,
+      "break_even_queries": 2282
+    },
+    "vs_lime": {
+      "name": "LIME",
+      "latency_ms": 0.89,
+      "break_even_queries": 4027
+    }
+  }
+}

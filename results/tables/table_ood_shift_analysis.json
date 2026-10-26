@@ -1,0 +1,7 @@
+{
+  "in_dist_spearman": 0.9231,
+  "in_dist_mse": 0.000415,
+  "ood_spearman": 0.7646,
+  "ood_mse": 0.001421,
+  "spearman_degradation_pct": 17.2
+}

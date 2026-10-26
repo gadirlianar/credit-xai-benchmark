@@ -1,0 +1,90 @@
+{
+  "XGBoost": {
+    "roc_auc": 0.8624,
+    "pr_auc": 0.4032,
+    "f1_score": 0.4435,
+    "precision": 0.3913,
+    "recall": 0.512,
+    "balanced_accuracy": 0.7275,
+    "brier_score": 0.049,
+    "confusion_matrix": [
+      [
+        19798,
+        1198
+      ],
+      [
+        734,
+        770
+      ]
+    ],
+    "sample_count": 22500,
+    "optimal_threshold": 0.19,
+    "training_time_sec": 0.68
+  },
+  "LightGBM": {
+    "roc_auc": 0.8618,
+    "pr_auc": 0.3996,
+    "f1_score": 0.4438,
+    "precision": 0.3857,
+    "recall": 0.5226,
+    "balanced_accuracy": 0.7315,
+    "brier_score": 0.0491,
+    "confusion_matrix": [
+      [
+        19744,
+        1252
+      ],
+      [
+        718,
+        786
+      ]
+    ],
+    "sample_count": 22500,
+    "optimal_threshold": 0.18,
+    "training_time_sec": 0.65
+  },
+  "MLP": {
+    "roc_auc": 0.8488,
+    "pr_auc": 0.3631,
+    "f1_score": 0.4169,
+    "precision": 0.3882,
+    "recall": 0.4501,
+    "balanced_accuracy": 0.6997,
+    "brier_score": 0.1856,
+    "confusion_matrix": [
+      [
+        19929,
+        1067
+      ],
+      [
+        827,
+        677
+      ]
+    ],
+    "sample_count": 22500,
+    "optimal_threshold": 0.66,
+    "training_time_sec": 4.66
+  },
+  "LogisticRegression": {
+    "roc_auc": 0.7522,
+    "pr_auc": 0.2545,
+    "f1_score": 0.3554,
+    "precision": 0.3545,
+    "recall": 0.3564,
+    "balanced_accuracy": 0.6549,
+    "brier_score": 0.0575,
+    "confusion_matrix": [
+      [
+        20020,
+        976
+      ],
+      [
+        968,
+        536
+      ]
+    ],
+    "sample_count": 22500,
+    "optimal_threshold": 0.13,
+    "training_time_sec": 0.04
+  }
+}

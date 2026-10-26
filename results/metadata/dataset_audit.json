@@ -1,0 +1,174 @@
+{
+  "total_rows": 150000,
+  "total_columns": 12,
+  "columns": [
+    "Unnamed: 0",
+    "SeriousDlqin2yrs",
+    "RevolvingUtilizationOfUnsecuredLines",
+    "age",
+    "NumberOfTime30-59DaysPastDueNotWorse",
+    "DebtRatio",
+    "MonthlyIncome",
+    "NumberOfOpenCreditLinesAndLoans",
+    "NumberOfTimes90DaysLate",
+    "NumberRealEstateLoansOrLines",
+    "NumberOfTime60-89DaysPastDueNotWorse",
+    "NumberOfDependents"
+  ],
+  "missing_values": {
+    "Unnamed: 0": 0,
+    "SeriousDlqin2yrs": 0,
+    "RevolvingUtilizationOfUnsecuredLines": 0,
+    "age": 0,
+    "NumberOfTime30-59DaysPastDueNotWorse": 0,
+    "DebtRatio": 0,
+    "MonthlyIncome": 29731,
+    "NumberOfOpenCreditLinesAndLoans": 0,
+    "NumberOfTimes90DaysLate": 0,
+    "NumberRealEstateLoansOrLines": 0,
+    "NumberOfTime60-89DaysPastDueNotWorse": 0,
+    "NumberOfDependents": 3924
+  },
+  "missing_percentages": {
+    "Unnamed: 0": 0.0,
+    "SeriousDlqin2yrs": 0.0,
+    "RevolvingUtilizationOfUnsecuredLines": 0.0,
+    "age": 0.0,
+    "NumberOfTime30-59DaysPastDueNotWorse": 0.0,
+    "DebtRatio": 0.0,
+    "MonthlyIncome": 19.820666666666668,
+    "NumberOfOpenCreditLinesAndLoans": 0.0,
+    "NumberOfTimes90DaysLate": 0.0,
+    "NumberRealEstateLoansOrLines": 0.0,
+    "NumberOfTime60-89DaysPastDueNotWorse": 0.0,
+    "NumberOfDependents": 2.616
+  },
+  "duplicate_rows": 0,
+  "target_distribution": {
+    "0": 139974,
+    "1": 10026
+  },
+  "default_rate_percent": 6.683999999999999,
+  "feature_statistics": {
+    "Unnamed: 0": {
+      "mean": 75000.5,
+      "std": 43301.414526548666,
+      "median": 75000.5,
+      "min": 1.0,
+      "p25": 37500.75,
+      "p75": 112500.25,
+      "p95": 142500.05,
+      "max": 150000.0
+    },
+    "SeriousDlqin2yrs": {
+      "mean": 0.06684,
+      "std": 0.24974553092871982,
+      "median": 0.0,
+      "min": 0.0,
+      "p25": 0.0,
+      "p75": 0.0,
+      "p95": 1.0,
+      "max": 1.0
+    },
+    "RevolvingUtilizationOfUnsecuredLines": {
+      "mean": 6.048438054666887,
+      "std": 249.75537062544026,
+      "median": 0.154180737,
+      "min": 0.0,
+      "p25": 0.029867442,
+      "p75": 0.5590462475,
+      "p95": 0.9999999,
+      "max": 50708.0
+    },
+    "age": {
+      "mean": 52.295206666666665,
+      "std": 14.77186586310035,
+      "median": 52.0,
+      "min": 0.0,
+      "p25": 41.0,
+      "p75": 63.0,
+      "p95": 78.0,
+      "max": 109.0
+    },
+    "NumberOfTime30-59DaysPastDueNotWorse": {
+      "mean": 0.4210333333333333,
+      "std": 4.1927812720183155,
+      "median": 0.0,
+      "min": 0.0,
+      "p25": 0.0,
+      "p75": 0.0,
+      "p95": 2.0,
+      "max": 98.0
+    },
+    "DebtRatio": {
+      "mean": 353.00507576386985,
+      "std": 2037.81852314437,
+      "median": 0.366507841,
+      "min": 0.0,
+      "p25": 0.17507383225,
+      "p75": 0.86825377325,
+      "p95": 2449.0,
+      "max": 329664.0
+    },
+    "MonthlyIncome": {
+      "mean": 6670.221237392844,
+      "std": 14384.674215282135,
+      "median": 5400.0,
+      "min": 0.0,
+      "p25": 3400.0,
+      "p75": 8249.0,
+      "p95": 14587.599999999991,
+      "max": 3008750.0
+    },
+    "NumberOfOpenCreditLinesAndLoans": {
+      "mean": 8.45276,
+      "std": 5.145950989643273,
+      "median": 8.0,
+      "min": 0.0,
+      "p25": 5.0,
+      "p75": 11.0,
+      "p95": 18.0,
+      "max": 58.0
+    },
+    "NumberOfTimes90DaysLate": {
+      "mean": 0.26597333333333334,
+      "std": 4.169303787594444,
+      "median": 0.0,
+      "min": 0.0,
+      "p25": 0.0,
+      "p75": 0.0,
+      "p95": 1.0,
+      "max": 98.0
+    },
+    "NumberRealEstateLoansOrLines": {
+      "mean": 1.01824,
+      "std": 1.1297709848828605,
+      "median": 1.0,
+      "min": 0.0,
+      "p25": 0.0,
+      "p75": 2.0,
+      "p95": 3.0,
+      "max": 54.0
+    },
+    "NumberOfTime60-89DaysPastDueNotWorse": {
+      "mean": 0.24038666666666667,
+      "std": 4.155179420987221,
+      "median": 0.0,
+      "min": 0.0,
+      "p25": 0.0,
+      "p75": 0.0,
+      "p95": 1.0,
+      "max": 98.0
+    },
+    "NumberOfDependents": {
+      "mean": 0.7572222678605657,
+      "std": 1.115086071487141,
+      "median": 0.0,
+      "min": 0.0,
+      "p25": 0.0,
+      "p75": 1.0,
+      "p95": 3.0,
+      "max": 20.0
+    }
+  }
+}

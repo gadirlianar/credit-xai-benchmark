@@ -1,0 +1,17 @@
+explainer_name,model_name,metric_type,top3_jaccard_similarity,spearman_rank_stability,cosine_similarity,lipschitz_sensitivity
+TreeSHAP,XGBoost,Stochastic Seed Stability,1.0,1.0,1.0,
+TreeSHAP,LightGBM,Stochastic Seed Stability,1.0,1.0,1.0,
+FastSHAP,XGBoost,Stochastic Seed Stability,1.0,1.0,1.0,
+FastSHAP,LightGBM,Stochastic Seed Stability,1.0,1.0,1.0,
+FastSHAP,MLP,Stochastic Seed Stability,1.0,1.0,1.0,
+LIME,LightGBM,Stochastic Seed Stability,0.714,0.8576,0.9022,
+TreeSHAP,XGBoost,Input Perturbation (eps=0.05),0.8,,,0.1156
+FastSHAP,XGBoost,Input Perturbation (eps=0.05),0.808,,,0.0997
+KernelSHAP,XGBoost,Input Perturbation (eps=0.05),0.74,,,0.1746
+LIME,XGBoost,Input Perturbation (eps=0.05),0.78,,,0.1589
+TreeSHAP,LightGBM,Input Perturbation (eps=0.05),0.8,,,0.4108
+FastSHAP,LightGBM,Input Perturbation (eps=0.05),0.8,,,0.0784
+KernelSHAP,LightGBM,Input Perturbation (eps=0.05),0.668,,,0.294
+LIME,LightGBM,Input Perturbation (eps=0.05),0.54,,,0.1687
+FastSHAP,MLP,Input Perturbation (eps=0.05),0.8,,,0.0958
+FastSHAP (Retrained 5 Seeds),XGBoost,Retraining Seed Stability,0.6873,0.8217,0.985,

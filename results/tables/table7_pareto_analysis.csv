@@ -1,0 +1,13 @@
+model_name,explainer_name,configuration,latency_p50_ms,latency_p95_ms,faithfulness_score,stability_score,throughput_qps,strict_sla_50ms,broad_sla_100ms,is_pareto_optimal,classification
+XGBoost,TreeSHAP,interventional,1.495,1.798,0.7467,1.0,631.73,True,True,True,Tree-Family Exact Standard
+LightGBM,TreeSHAP,interventional,1.379,1.959,0.7263,1.0,614.42,True,True,False,Dominated Configuration
+XGBoost,FastSHAP,amortized_25ep,0.027,0.031,0.7182,0.9231,13622.4,True,True,True,Balanced Pareto Optimal (Tree Latency)
+LightGBM,FastSHAP,amortized_25ep,0.032,0.075,0.7006,0.9322,5115.09,True,True,False,Dominated Configuration
+MLP,FastSHAP,amortized_25ep,0.027,0.028,0.6734,0.8796,10560.25,True,True,True,Lowest Latency Champion
+XGBoost,KernelSHAP,nsamples_100,8.1,8.191,0.7634,0.9796,122.39,True,True,True,Highest Faithfulness Champion
+LightGBM,KernelSHAP,nsamples_100,8.466,9.812,0.7098,0.9811,114.7,True,True,False,Dominated Configuration
+MLP,KernelSHAP,nsamples_100,1.55,1.71,0.7576,0.9939,600.3,True,True,True,Balanced Neural Sampling Explainer
+XGBoost,LIME,num_samples_200,0.954,1.102,0.7429,0.7847,966.95,True,True,False,Dominated Configuration
+LightGBM,LIME,num_samples_200,1.087,2.279,0.7023,0.7758,685.05,True,True,False,Dominated Configuration
+MLP,LIME,num_samples_200,0.89,1.972,0.7006,0.4412,860.6,True,True,False,Dominated Configuration
+MLP,ExactShapley,exact_1024_subsets,6.78,7.15,0.8765,1.0,146.24,True,True,True,Neural-Family Exact Standard (Maximum Faithfulness)
