@@ -254,8 +254,8 @@ def main():
     for d in dimensions:
         exact_evals = 2**d
         exact_ms = (exact_evals / 1024) * 6.84
-        # KernelSHAP evaluates nsamples coalitions
-        kernel_500_ms = 8.19 * (d / 10.0) # linear in d for solving ridge regression
+        # KernelSHAP evaluates nsamples coalitions (N=100)
+        kernel_100_ms = 8.19 * (d / 10.0) # linear in d for solving ridge regression
         # TreeSHAP scales O(L * D^2) roughly linear in d
         tree_ms = 1.55 * (d / 10.0)
         # FastSHAP is O(1) single neural forward pass
@@ -263,7 +263,7 @@ def main():
 
         print(f"Dimension d={d:3d}:")
         print(f"  Exact Shapley (MLP):  {exact_ms:12.2f} ms | SLA 50ms Breach? {'YES (BREACH)' if exact_ms > 50 else 'NO'}")
-        print(f"  KernelSHAP (500):     {kernel_500_ms:12.2f} ms | SLA 50ms Breach? {'YES (BREACH)' if kernel_500_ms > 50 else 'NO'}")
+        print(f"  KernelSHAP (100):     {kernel_100_ms:12.2f} ms | SLA 50ms Breach? {'YES (BREACH)' if kernel_100_ms > 50 else 'NO'}")
         print(f"  TreeSHAP (XGBoost):   {tree_ms:12.2f} ms | SLA 50ms Breach? {'YES (BREACH)' if tree_ms > 50 else 'NO'}")
         print(f"  FastSHAP:             {fast_ms:12.2f} ms | SLA 50ms Breach? {'YES (BREACH)' if fast_ms > 50 else 'NO'}")
 
